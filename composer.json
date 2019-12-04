@@ -1,5 +1,5 @@
 {
-  "name": "burn/import-export",
+  "name": "james-ban/import-export",
   "description": "import excel or export excel",
   "type": "library",
   "require": {
