@@ -3,7 +3,7 @@
 ## 安装
 
 ```shell
-composer require "test"
+composer require "james-ban/import-export"
 ```
 
 
