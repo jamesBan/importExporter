@@ -45,7 +45,7 @@ print_r($reader->readAll());
 
 
 
-###  导出
+###  导出 (csv/json/excel)
 
 ```php
 <?php
