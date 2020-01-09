@@ -3,8 +3,9 @@
 namespace ImportExporter\export;
 
 /**
- * Class Excel
+ * Class Excel(可能兼容最新版wps)
  * @package app\utils\export
+ * @deprecated
  */
 class Excel extends Download
 {

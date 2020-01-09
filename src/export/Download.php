@@ -16,7 +16,7 @@ abstract class Download extends Model
     public $header;
     public $filename;
 
-    public function download():void
+    public function download(): void
     {
         $response = new Response();
         $response->headers->set('Pragma', 'public');

@@ -1,4 +1,5 @@
 <?php
+
 namespace ImportExporter;
 
 class Model
@@ -17,9 +18,9 @@ class Model
         $getter = 'get' . $name;
         if (method_exists($this, $getter)) {
             return $this->$getter();
-        } elseif (method_exists($this, 'set' . $name)) {
-            throw new InvalidCallException('Getting write-only property: ' . get_class($this) . '::' . $name);
         }
+
+        return null;
     }
 
 
@@ -31,7 +32,7 @@ class Model
         }
     }
 
-   	public function __isset($name)
+    public function __isset($name)
     {
         $getter = 'get' . $name;
         if (method_exists($this, $getter)) {

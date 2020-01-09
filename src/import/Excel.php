@@ -60,7 +60,7 @@ class Excel extends Model
             $reader->setReadFilter($this->readFilter);
         }
 
-        try{
+        try {
             $spreadsheet = $reader->load($this->filePath);
             $workSheet = $spreadsheet->setActiveSheetIndex(0);
 
@@ -69,13 +69,13 @@ class Excel extends Model
                 $data = array_map($this->formatFunction, $data);
             }
 
-            if((int)$this->fistLine > 0) {
+            if ((int)$this->fistLine > 0) {
                 $data = array_slice($data, $this->fistLine);
             }
 
             return $data;
         } catch (Throwable $e) {
-            throw new RuntimeException('读取文件内容错误:'.$e->getMessage(), 400);
+            throw new RuntimeException('读取文件内容错误:' . $e->getMessage(), 400);
         }
 
     }
