@@ -5,7 +5,7 @@
   "require": {
     "php": ">=7.2",
     "phpoffice/phpspreadsheet": "^1.9",
-    "symfony/http-foundation": "^v4.3.10",
+    "symfony/http-foundation": "^v4.3",
     "ext-json": "*",
     "league/csv": "^9.5"
   },
