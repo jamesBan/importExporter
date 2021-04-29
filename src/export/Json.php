@@ -13,8 +13,11 @@ class Json extends Download
         echo '{';
         echo sprintf('"header": [%s],', $this->prettyJson($this->header));
         echo '"data": [';
-        foreach ($this->data as $value) {
-            echo $this->prettyJson($value), ',';
+        foreach ($this->data as $index => $value) {
+            if ($index > 0) {
+                echo ',';
+            }
+            echo $this->prettyJson($value);
         }
         echo ']}';
     }

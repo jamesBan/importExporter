@@ -16,7 +16,7 @@ class Csv extends Download
         $csv->insertOne($this->header);
         $csv->insertAll($this->data);
 
-        $csv->output('中文.csv');
+        $csv->output($this->getFilename());
     }
 
     public function getExtension(): string

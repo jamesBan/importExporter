@@ -3,7 +3,7 @@
 namespace ImportExporter\export;
 
 /**
- * Class Excel(可能兼容最新版wps)
+ * Class Excel(可能不兼容最新版wps)
  * @package app\utils\export
  * @deprecated
  */
