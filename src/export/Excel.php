@@ -3,7 +3,7 @@
 namespace ImportExporter\export;
 
 /**
- * Class Excel(可能不兼容最新版wps)
+ * Class Excel(可能兼容最新版wps)
  * @package app\utils\export
  * @deprecated
  */
@@ -40,13 +40,13 @@ EOF;
         foreach ($this->data as $item) {
             echo '<tr><td>';
             echo ltrim(implode('</td><td>', $item), '<td>');
-            echo '<tr>';
+            echo '</tr>';
         }
     }
 
     protected function sendHeader()
     {
-        $header = '<tr><th>' . rtrim(implode('</th><th>', $this->header), '<th>') . '</th></tr>';
+        $header = '<th>' . rtrim(implode('</th><th>', $this->header), '<th>') . '</th>';
         $content = <<<EOF
 <html xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:x="urn:schemas-microsoft-com:office:excel" xmlns="http://www.w3.org/TR/REC-html40">
     <meta http-equiv="content-type" content="application/vnd.ms-excel; charset=UTF-8">
